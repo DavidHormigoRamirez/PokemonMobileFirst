@@ -15,7 +15,7 @@ data class PokemonEntity(
 
 fun List<PokemonEntity>.asPokemon():List<Pokemon> {
     return this.map {
-        Pokemon(it.name,
+        Pokemon(it.name.replaceFirstChar { c -> c.uppercase() },
                 it.id,
                 it.frontImageUrl,
                 it.favorite)

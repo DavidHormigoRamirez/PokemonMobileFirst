@@ -21,7 +21,7 @@ class PokemonListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentPokemonListBinding.inflate(inflater,
             container,
             false)
@@ -30,7 +30,7 @@ class PokemonListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = PokemonListAdapter()
+        val adapter = PokemonListAdapter(requireContext())
         val rv = binding.pokemonList
         rv.adapter = adapter
         viewLifecycleOwner.lifecycleScope.launch {
