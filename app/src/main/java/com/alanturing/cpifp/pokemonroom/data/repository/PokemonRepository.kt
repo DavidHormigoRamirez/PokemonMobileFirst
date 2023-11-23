@@ -26,9 +26,8 @@ class PokemonRepository @Inject constructor(
         return list
     }
 
-    suspend fun refreshList() = withContext(Dispatchers.IO) {
+    suspend fun refreshList() = withContext(Dispatchers.IO){
             val apiPokemon = apiRepository.getAll()
             dbRepository.insert(apiPokemon.asEntityModel())
-
     }
 }
