@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/pokemon_navigation"
+    android:id="@+id/pokemon"
     app:startDestination="@id/pokemonListFragment">
-
     <fragment
         android:id="@+id/pokemonListFragment"
         android:name="com.alanturing.cpifp.pokemonroom.ui.list.PokemonListFragment"
