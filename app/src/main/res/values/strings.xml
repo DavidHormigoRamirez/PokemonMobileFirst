@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Pokedex!</string>
     <string name="pokemon_image_content_description">Pokemon image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pokemon_bottom_nav">Pokemon</string>
+    <string name="location_bottom_nav">Location</string>
 </resources>

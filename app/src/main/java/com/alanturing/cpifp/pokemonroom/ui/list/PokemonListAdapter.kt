@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.imageLoader
+import coil.load
 import coil.request.ImageRequest
 import com.alanturing.cpifp.pokemonroom.data.repository.Pokemon
 import com.alanturing.cpifp.pokemonroom.databinding.PokemonListItemBinding
@@ -18,6 +19,7 @@ class PokemonListAdapter(private val context: Context): ListAdapter<Pokemon,Poke
 
         fun bind(pokemon:Pokemon) {
             binding.pokemonName.text = pokemon.name
+            //binding.pokemonSprite.load(pokemon.frontImageUrl)
             val imageRequest = ImageRequest.Builder(context)
                 .data(pokemon.frontImageUrl)
                 .crossfade(true)

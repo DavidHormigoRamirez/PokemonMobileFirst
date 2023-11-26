@@ -20,7 +20,7 @@ class PokemonApplication:Application(), ImageLoaderFactory {
             .diskCache {
                 DiskCache.Builder()
                     .directory(this.cacheDir.resolve("image_cache"))
-                    .maxSizePercent(0.02)
+                    .maxSizePercent(0.1)
                     .build()
             }
             .build()
